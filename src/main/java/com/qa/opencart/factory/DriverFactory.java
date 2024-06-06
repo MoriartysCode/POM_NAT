@@ -48,7 +48,7 @@ public class DriverFactory {
 			//driver = new EdgeDriver(optionsManager.getEdgeOprions());
 			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOprions()));
 		}else {
-			System.out.println("Please pass the right browser");
+			System.out.println("Please pass the correct browser");
 			throw new FrameWorkException("Wrong Browser");
 		}
 		
