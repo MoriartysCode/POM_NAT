@@ -12,6 +12,11 @@ public class Mymail {
 		System.out.println("get by Bunty");
 	}
 	
+	public void getMail2() {
+		System.out.println("get by Bunty");
+	}
+	
+	
 	
 	
 
