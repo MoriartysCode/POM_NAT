@@ -1,8 +1,0 @@
-package com.qa.opencart.pages;
-
-public class MyTest {
-	public void sent() {
-		System.out.println("Sent by Ratish");
-	}
-
-}
