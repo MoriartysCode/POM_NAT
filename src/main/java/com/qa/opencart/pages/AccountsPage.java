@@ -33,7 +33,7 @@ public class AccountsPage {
 	public String getAccPageURL() {
 		String url = eleUtil.waitForURLContainsAndFetch(AppConstants.DEFAULT_MEDIUM_TIMEOUT,AppConstants.ACCOUNTS_PAGE_URL_FRACTION_VALUE );
 		//String url = driver.getCurrentUrl();
-		System.out.println("Accounts page url  is-"+url);
+		System.out.println("Accounts page url  is  -"+url);
 		return url;
 	}
 	
