@@ -75,6 +75,7 @@ public class DriverFactory {
 		//mvn clean install -Denv="QA"
 		String envName = System.getProperty("env");
 		try {
+			System.out.println("This is the name of environment passed------"+envName.toLowerCase().trim());
 			if(envName==null) {
 				//By default run on QA environment
 				System.out.println("No environment is passed");
@@ -87,9 +88,11 @@ public class DriverFactory {
 				case "dev":
 					ip = new FileInputStream("./src/test/resources/config/dev.config.properties");
 					break;
-				default:
-					System.out.println("Wrong environment passed No need to run the testCases");
-					throw new FrameWorkException("Wrong Environment");
+				/*
+				 * default:
+				 * System.out.println("Wrong environment passed No need to run the testCases");
+				 * throw new FrameWorkException("Wrong Environment");
+				 */
 				
 					
 				}
