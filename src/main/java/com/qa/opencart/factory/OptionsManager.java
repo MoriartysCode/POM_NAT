@@ -18,6 +18,7 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOprions() {
 		co=new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("============Running Chrome in HeadLess Mode==========================");
 			co.addArguments("--headless");
