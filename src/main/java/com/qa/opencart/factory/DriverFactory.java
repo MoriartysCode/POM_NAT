@@ -80,7 +80,7 @@ public class DriverFactory {
 		// mvn clean install -Denv="QA"
 		String envName = System.getProperty("env");
 		try {
-			System.out.println("This is the name of environment passed------" + envName.toLowerCase().trim());
+			//System.out.println("This is the name of environment passed------" + envName.toLowerCase().trim());
 			if (envName == null) {
 				// By default run on QA environment
 				System.out.println("No environment is passed");
