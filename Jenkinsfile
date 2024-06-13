@@ -39,7 +39,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/MoriartysCode/POM_NAT.git'
-                    bat "mvn clean test -mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/TestRunner/testng_regression.xml"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/TestRunner/testng_regression.xml"
                     
                 }
             }
