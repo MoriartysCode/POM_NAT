@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Opencart App Test Regression Suite" thread-count="3"
-	parallel="tests" verbose="4">
+<suite name="Opencart App Test Regression Suite" thread-count="4"
+	parallel="tests" verbose="1">
 	
 	<listeners>
 		<listener
@@ -15,14 +15,21 @@
 
 
 	<test name="Login_Page_Test_Chrome">
-		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.opencart.test.LoginPageTest" />
+		</classes>
+	</test>
+	
+	<test name="Login_Page_Test_Edge">
+		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.LoginPageTest" />
 		</classes>
 	</test>
     
-    <test name="Accounts_Page_Test_Edge">
-    	<parameter name="browser" value="edge"></parameter>
+    <test name="Accounts_Page_Test_Chrome">
+    	<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.AccountsPageTest" />
 		</classes>

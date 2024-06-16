@@ -2,6 +2,7 @@ package com.qa.opencart.factory;
 
 import java.util.Properties;
 
+import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -19,6 +20,10 @@ public class OptionsManager {
 	public ChromeOptions getChromeOprions() {
 		co=new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setBrowserVersion(prop.getProperty("browserversion"));
+		}
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("============Running Chrome in HeadLess Mode==========================");
 			co.addArguments("--headless");

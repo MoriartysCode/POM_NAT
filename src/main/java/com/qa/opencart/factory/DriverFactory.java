@@ -91,14 +91,15 @@ public class DriverFactory {
 	 */
 	private void initRemoteDriver(String browser) {
 		//run on the remote machine/selenium grid
-		System.out.println("running test on remote server");
+		System.out.println("running test on grid server::::"+browser);
 		try {
 			switch(browser.toLowerCase()) {
 			case "chrome":
 //					tlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.getChromeOprions()));
 					//java 21 version URL is depricated
 					tlDriver.set(new RemoteWebDriver(new URI(prop.getProperty("huburl")).toURL(), optionsManager.getChromeOprions()));
-				break;
+				System.out.println("Wait");
+					break;
 				
 			case "firefox":	
 					tlDriver.set(new RemoteWebDriver(new URI(prop.getProperty("huburl")).toURL(), optionsManager.getFirefoxOprions()));
@@ -146,7 +147,7 @@ public class DriverFactory {
 				// By default run on QA environment
 				System.out.println("No environment is passed");
 				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
-			} else
+			}else
 				switch (envName.toLowerCase().trim()) {
 				case "qa":
 					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
@@ -162,7 +163,7 @@ public class DriverFactory {
 				 
 
 				}
-		} catch (FileNotFoundException e) {
+		}catch (FileNotFoundException e) {
 
 		}
 		try {
